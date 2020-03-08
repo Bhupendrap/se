@@ -1,0 +1,15 @@
+<div class="grid-container">
+    <div class="card" *ngFor="let title for titles; index as i">
+        <div [style.backgroundColor]="title?.color" class="grid-container">
+            <div>
+                <p class="title">{{title?.title}}</p>
+            </div>
+            <div style="margin: 24px 0;">
+            <span>
+                {{i}}
+            </span>
+            </div>
+            <p><button (click)="onPopup()">open</button></p>
+        </div>
+    </div>
+</div>
